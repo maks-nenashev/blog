@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  #get '/' =>'home#index'    # Eto nuzno wsegda!
+  
+  get '/' =>'home#index'    # Eto nuzno wsegda!
   #get 'home/index'
+  
   resources :articles #4 
-  resources :contacts, only: [:new,:create]
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resource :contacts, only: [:new,:create]
+  
+end
+
+# Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
-end
-
 
 # 1. rails g controller home index     :zapusk (home - контроллер index - экшен
 
