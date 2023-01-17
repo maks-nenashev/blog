@@ -9,7 +9,9 @@ class CreateArticles < ActiveRecord::Migration[7.0]
   end
 end
 
-
+#          rails db.rollback "esli nuzno izmenitj w migracii"
+                          #STEP=1 "otmena poslednej migracii"
+                          
   #       Chec this if you delited migration
 
       #remove    db/migrate/QQQQQ_create_entries.rb
