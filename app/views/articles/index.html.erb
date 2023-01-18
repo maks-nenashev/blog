@@ -1,0 +1,13 @@
+<h1>List of articles!</h1>
+
+<% @articles.each do |article| %>
+  <h3>
+  <%= article.title %>
+  </h3>
+  <p>
+  <%= article.text %>
+  </p>
+                     <!Ssylka na statyu>
+  <p><%= link_to  "Show article", article_path(article) %> | <%= link_to  "Edit article", edit_article_path(article) %></p>
+  <hr>            
+<% end %>
