@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   #get 'home/index'
   
   resources :articles #4 
-  resource :contacts, only: [:new,:create]
-  
+                                           #get 'contacts' => 'contacts#new' only:[:create]
+  resource :contacts, only: [:new,:create], path_names: { :new => '' }
+                                            #Etot code dla 'contacts' => 'contacts#new'
+                                            # Chtoby "contacts#new" otkrywalsa w "contacts"
 end
 
 # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
