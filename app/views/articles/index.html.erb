@@ -1,4 +1,4 @@
-<h1>List of articles!</h1>
+<h1>List of articles!</h1>  <!# Wywod wsech zapisej!>
 
 <% @articles.each do |article| %>
   <h3>
@@ -7,7 +7,10 @@
   <p>
   <%= article.text %>
   </p>
-                     <!Ssylka na statyu>
-  <p><%= link_to  "Show article", article_path(article) %> | <%= link_to  "Edit article", edit_article_path(article) %></p>
+                     <!Ssylka na statiyi>
+  <p><%= link_to  "Show article", article_path(article) %> | 
+     <%= link_to  "Edit article", edit_article_path(article) %> |
+     <%= link_to 'Delete', article_path(article), data: {'turbo-method': :delete,'turbo-confirm': 'Are you sure?'} %>
+  </p>                                                         <!Eto JS window "Udalit post">
   <hr>            
 <% end %>
