@@ -8,7 +8,8 @@
   <%= article.text %>
   </p>
                      <!Ssylka na statiyi>
-  <p><%= link_to  "Show article", article_path(article) %> | 
+  <p><%= link_to "New article", new_article_path(article) %> |
+     <%= link_to  "Show article", article_path(article) %> | 
      <%= link_to  "Edit article", edit_article_path(article) %> |
      <%= link_to 'Delete', article_path(article), data: {'turbo-method': :delete,'turbo-confirm': 'Are you sure?'} %>
   </p>                                                         <!Eto JS window "Udalit post">
