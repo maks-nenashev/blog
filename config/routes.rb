@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get '/' =>'home#index'    # Eto nuzno wsegda!
   #get 'home/index'
   
+  get 'terms' => 'pages#terms' #Контроллер и роутинг статических страниц :rails g controller Pages
+  get 'about' => 'pages#about'
+  
   resources :articles #4 
                                            #get 'contacts' => 'contacts#new' only:[:create]
   resource :contacts, only: [:new,:create], path_names: { :new => '' }
