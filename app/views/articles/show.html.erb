@@ -3,9 +3,26 @@
 <h1>Thanks You!</h1>
 <h2>Article has been created!!!</h2>
 
-<h3><%= @article.title %></h3>
+ <h3><%= @article.title %></h3>
 
-<h3><%= @article.text %></h3>
-
+ <h3><%= @article.text %></h3>
 
 <%= link_to "Show all articles!", articles_path %> <!Prawelnaja ssylka>
+
+
+<p>                  <!Podkluchenie  "comments">
+    <%= form_for ([@article, @article.comments.build]) do |f| %> 
+  <p>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+
+  <p><%= f.submit %></p>
+
+ <% end %>
+</p>
+
