@@ -7,9 +7,22 @@
 
  <h3><%= @article.text %></h3>
 
-<%= link_to "Show all articles!", articles_path %> <!Prawelnaja ssylka>
+<!/////////////////////////////////////////////////////////////////////////////////////////>
+<h2>Add comments</h2>
 
+<%= 'No comments' if @article.comments.empty? %>
 
+<% @article.comments.each do |comment| %>
+<p>
+<i><strong>Author: </strong><%= comment.author %></i></br>
+<%= comment.body %>
+</p>
+<!hr>
+
+<% end %>
+
+<!/////////////////////////////////////////////////////////////////////////////////////////>
+<h2>Comments</h2>
 <p>                  <!Podkluchenie  "comments">
     <%= form_for ([@article, @article.comments.build]) do |f| %> 
   <p>
@@ -26,3 +39,4 @@
  <% end %>
 </p>
 
+<%= link_to "Show all articles!", articles_path %> <!Prawelnaja ssylka>
