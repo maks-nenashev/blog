@@ -30,9 +30,9 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   
     if @article.update(article_params)
-      redirect_to @article
+       redirect_to @article
     else
-      render action: 'redact'    #"perenaprowlenie"
+       render action: 'edit'    #"perenaprowlenie"
     end
   end
 
@@ -42,6 +42,7 @@ class ArticlesController < ApplicationController
   
     redirect_to action: "index" #"perenaprowlenie"
   end
+
  #////////////////////////////////////////////////////////////////////////////////////
    private
  
