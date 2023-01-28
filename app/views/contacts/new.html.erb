@@ -4,7 +4,7 @@
 
 <% if @contact && @contact.errors.any?%> <!Prowerka! Esli estj ochybka to nepropustit>
 <p>
-  <%= @contact.errors.full_messages.each do |msg| %>
+  <%= @contact.errors.full_messages.each do |msg| %> <! Wywod infy w stolbec o oshybkah>
     <li><%= msg %></li>
 <% end %>
     </ul> 

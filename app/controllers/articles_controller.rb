@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
-    
+   
+   before_action :authenticate_user!, :only => [:new, :create]# Blokerowka registracii!
+                                                             
    def index   # 4: Wywod wsech zapisej!
       @articles = Article.all
    end

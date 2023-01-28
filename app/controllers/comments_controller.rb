@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
-    
+                                                      # Zapret na komit bez regestracii
+  before_action :authenticate_user!, :only => [:create]# Blokerowka registracii!
+
     def create
         @article = Article.find(params[:article_id])
         @article.comments.create(comment_params)
