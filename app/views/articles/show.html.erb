@@ -10,7 +10,7 @@
 <!/////////////////////////////////////////////////////////////////////////////////////////>
 <h2>Add comments</h2>
 
-<%= 'No comments' if @article.comments.empty? %>
+<%= 'No comments!' if @article.comments.empty? %>
 
 <% @article.comments.each do |comment| %>
 <p>
