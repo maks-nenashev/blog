@@ -65,9 +65,11 @@ group :development do
   # gem "spring"
 end
 
-group :test do
+group :test, :developmentdo do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
