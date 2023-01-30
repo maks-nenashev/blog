@@ -42,7 +42,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
   
-    redirect_to action: "index" #"perenaprowlenie"
+    redirect_to article_path #"perenaprowlenie"
   end
 
  #////////////////////////////////////////////////////////////////////////////////////
